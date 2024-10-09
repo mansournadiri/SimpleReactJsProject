@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Created by Mansour Nadiri
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React Router dom
 
-## Available Scripts
+---npm install react-router-dom
+------Link #<Link to=””></Link>
+------NavLink #<NavLink to="" className={({isActive})=>isActive?ACss:InACss}></NavLink>
+------useNavigate #const navigate = useNavigate();return navigate(`/search?query=${query}`);
+------BrowserRouter
+------createBrowserRouter #const router = creatBrowserRouter([{path: “/*”, element: <APP />}]);
+------RouterProvider #< RouterProvider router={router} />
+------ScrollRestoration #<ScrolRestoration />
+------useParams #const params = useParams();
+------useSearchParams #const [urlp] = useSearchParams(); const value = urlp.get(“query”);
 
-In the project directory, you can run:
+## React Components
 
-### `npm start`
+---rafc #react arrow function component
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## React Hook
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Hooks let you use different React features from your components
+---State Hooks (State lets a component “remember” information like user input.)
+------useState declares a state variable that you can update directly.
+---------#const [index, setIndex] = useState(0);
+------useReducer declares a state variable with the update logic inside a reducer function.
+---Context Hooks (Context lets a component receive info from parents without passing it as props)
+------useContext reads and subscribes to a context. #const theme = useContext(ThemeContext);
+---Ref Hooks (Refs let a component hold some information that isn’t used for rendering)
+------useRef declares a ref. #const inputRef = useRef(null)
+------useImperativeHandle lets you customize the ref exposed by your component.
+---Effect Hooks (Effects let a component connect to and synchronize with external systems)
+------useEffect connects a component to an external system. #useEffect(setup, dependencies?)
 
-### `npm test`
+## .ENV file
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+it’s a custom Environment Variables
+---in .env file declare your variable #”YOUR_KEY_VALUE” = YOUR-VALUE
+---access to your variable on your syntax #process.env.YOUR_KEY_VALUE
 
-### `npm run build`
+## UI/UX Component
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+tailwindcss #Modern CSS
+--- npm install -D tailwindcss
+--- npx tailwindcss init
+Flowbite #UI Component from tailwindcss
+--- npm install flowbite
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## VS Code Extension
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---ES7 React/Redux/GraphQL/React-native Snippets
+---IntelliCode
+---vscode-icons
+---Auto Import
+---ESLint
+---Prettier
