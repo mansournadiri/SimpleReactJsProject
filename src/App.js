@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+import { Header, Footer } from "./Components";
+import { AllRoutes } from "./routes/AllRoutes";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -26,28 +28,40 @@ function App() {
   }
   return (
     <div className="App">
-      <div className="list">
-        <button onClick={GenerateList}>Generate List</button>
-        <ul>
-          {items.map((item) => (
-            <li key={item.id}>
-              <p>
-                {item.description}
-                <button onClick={() => removeItem(item.id)}>Remove Item</button>
-              </p>
-            </li>
-          ))}
-        </ul>
+      <Header />
+      <AllRoutes />
+      <div className="GenerateList">
+        <div className="list">
+          <button className="btn btn-success" onClick={GenerateList}>
+            Generate List
+          </button>
+          <ul>
+            {items.map((item) => (
+              <li key={item.id}>
+                <p>
+                  {item.description}
+                  <button
+                    className="btn btn-danger ml-2"
+                    onClick={() => removeItem(item.id)}
+                  >
+                    ×
+                  </button>
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="box">
+          <p>{count}</p>
+          <button className="btn btn-success" onClick={HandleAdd}>
+            add
+          </button>
+          <button className="btn btn-danger" onClick={HandleSub}>
+            sub
+          </button>
+        </div>
       </div>
-      <div className="box">
-        <p>{count}</p>
-      </div>
-      <button className="add" onClick={HandleAdd}>
-        add
-      </button>
-      <button className="sub" onClick={HandleSub}>
-        sub
-      </button>
+      <Footer />
     </div>
   );
 }
