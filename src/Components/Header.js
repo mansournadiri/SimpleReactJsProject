@@ -27,9 +27,9 @@ export const Header = () => {
           to="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src={Logo} className="h-8" alt="MyShopping" />
+          <img src={Logo} className="h-8" alt="FaradarsProject" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            MyShopping
+            FaradarsProject
           </span>
         </Link>
         <div className="flex md:order-2">

@@ -54,3 +54,9 @@ Flowbite #UI Component from tailwindcss
 ---Auto Import
 ---ESLint
 ---Prettier
+
+# check below link:
+
+https://tailwindcss.com/
+https://flowbite.com
+https://www.themoviedb.org/
